@@ -1,0 +1,231 @@
+/*GENERAL SETTINGS*/
+
+@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
+
+* {
+    background-color: #0e1b56;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Heebo", "sans-serif";
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.container {
+    margin-left: 10px;
+    padding: 20px;
+}
+
+
+/*HEADER*/
+
+header {
+    text-align: center; 
+    padding-bottom: 15px;
+    border-bottom: 3px double #D8D4F0;
+    height: 40px;
+}
+
+#weatherIcon {
+  height: 24px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.pageTitle {
+    font-size: 26px;
+    background: none;
+}
+
+
+/*SEARCH AREA*/
+
+.description h3 {
+    margin: 25px auto 0px;
+    font-size: 18px;
+    font-style: italic;
+    color: #D8D4F0;
+}
+
+#searchArea {
+    margin-left: 10px;
+    padding: 10px 0 20px;
+    text-align: center;
+}
+
+#searchForm {
+    background-color: #D8D4F0;
+    margin: 0px 20% 0px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #004A94;
+    color: #000000;
+}
+
+#searchText {
+    background-color: #FFFFFF;
+    color: #0e1b56;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+#btn-search {
+    padding: 7px;
+    border-radius: 10px;
+    border: 2px solid #004A94;
+    width: 100px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+
+/*BACKGROUND IMAGE*/
+
+#hero {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    opacity: 1;
+}
+
+
+/*MAIN AREA*/
+
+.errMsg {
+    position: relative;
+    padding: 10px;
+}
+
+.mainpart {
+    position: absolute;
+    z-index: 2;
+    visibility: hidden;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+
+/*CITY AND TODAYS TEMPERATURE*/
+
+.weatherResult {
+    text-align: left;
+    padding-top: 0;
+}
+
+.card {
+    border: none;
+}
+
+.card h1 {
+    font-size: 26px;
+    line-height: 0;
+}
+
+.card h2 {
+    font-size: 18px;
+}
+
+.card h3 {
+    line-height: 120%;
+    font-size: 18px;
+}
+
+
+/*GOOGLE MAPS*/
+
+.mapResult {
+    visibility: hidden;
+}
+
+#gmap_canvas {
+    position: absolute;
+    overflow:hidden;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 4px 8px 0 #030929, 0 6px 20px 0 #030929;
+}
+
+.gmap_canvas {
+    text-align: left;
+}
+
+
+/*CHART*/
+
+#myChart {
+    padding-top: 20px;
+}
+
+
+/*TABLETS and SMALL SCREENS*/
+
+@media screen and (max-width: 992px) {
+    .gmap_canvas {
+      text-align: center;
+      padding-right: 0px;
+      margin-top: -10px;
+    }
+    #gmap_canvas {
+      position: relative;
+      margin-top: 0px;
+      height: 300px;
+    }
+    .weatherResult {
+      text-align: center;
+    }
+    .weatherResult h3 {
+      text-align: left;
+      margin-left: 50%;
+    }
+    .subtemp {
+      text-align: left;
+      margin-left: 20%;
+    }
+    .card {
+        justify-content: center;
+    }   
+}
+
+
+/*MOBILE DEVICES*/
+
+@media screen and (max-width: 768px) {
+    #searchArea {
+      margin: 10px 25px 10px 20px;
+      padding: 5px;
+      text-align: center;
+    }
+    #searchForm   {
+      margin: 10px 0px 5px;
+    }
+    #hero {
+      margin-top: 20px;
+    }
+    .gmap_canvas {
+      text-align: center;
+      padding-right: 0px;
+      margin-top: -10px;
+    }
+    #gmap_canvas {
+      margin-top: 0px;
+    }
+    .weatherResult {
+      text-align: center;
+    }
+    .weatherResult h3 {
+      text-align: left;
+      margin-left: 15%;
+    }
+    .subtemp {
+      text-align: left;
+      margin-left: 20%;
+    }
+}
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Weather by destination</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="icon" href="data:;base64,=">
+    </head>
+  
+  
+    <body class="row">
+        <div class="col-12 container">
+
+            <!--HEADER-->
+            <header class="row justify-content-center header ">
+                <img id="weatherIcon" class="col-0.7 pull-right img-responsive " src="https://raw.githubusercontent.com/JohannaXX/MyImages/master/images/WeatherIconWhite.png" alt="weather"/>
+                <h1 class="col-2.5 text-left pageTitle">Weather at destination</h1>
+            </header>
+
+            <!--MAIN-->
+            <main>  
+                <div class="row justify-content-center">
+                  <div class="col-12 text-center description"> 
+                    <h3> Type in the location you are looking for&#58;</h3>
+                    
+                  </div>  
+                </div>
+                
+                <div class="row justify-content-center">
+                  <div id="searchArea" class="col-12 col-sm-8">  
+                    <form id="searchForm" class="row justify-content-center">
+                      <input type="text" id="searchText" class="col-8" placeholder=" Location"/>
+                      <input id="btn-search" class="col-3" type="submit" value="Search" onclick="">
+                    </form>
+                  </div>  
+                </div>
+              
+                 <!--SEARCH RESULTS-->
+                <div class="row errMsg"></div>
+                <div class="row mainpart">
+                    <div class="col-12 col-lg-4 card border-0">
+                        <div class="row">
+                          <div class="col-12 weatherResult">
+                            <!--temperature info here-->
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-12 col-lg-4 mapResult ">
+                        <div class = "gmap_canvas">
+                        <!-- RENDERING MAP -->
+                          </div>
+                    </div>
+                    <div class="col-10 chart-container">
+                            <canvas id="myChart" width="auto" height="500"></canvas>
+                    </div>
+                </div>
+                <img id="hero" class="col-12" src="https://raw.githubusercontent.com/JohannaXX/MyImages/master/images/weather1.jpg" alt="weather"/>
+            </main> 
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js" integrity="sha256-rjYnB0Bull7k2XkbJ03UNGqMuMieR769uQVGSSlsi6A=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
